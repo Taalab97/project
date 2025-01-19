@@ -1,0 +1,375 @@
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Header Styling */
+header {
+    background-color: #9e0909c5;
+    color: white;
+    padding: 1em 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 1em;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+#home {
+    background: url('/Screenshot\ 2024-09-12\ 010041.jpg') no-repeat center center/cover;
+    color: black;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+
+#home h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
+#home p {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+#home .btn {
+    padding: 0.75em 1.5em;
+    font-size: 1.2em;
+}
+
+/* Shop Section */
+#shop {
+    padding: 2em;
+    background-color: #fff;
+    text-align: center;
+}
+
+.scroll-container {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.product-container {
+    display: flex;
+    gap: 1em;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.product {
+    border: 1px solid #ddd;
+    padding: 1em;
+    width: 280px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.scroll-btn {
+    background-color: #555;
+    border: none;
+    color: white;
+    padding: 0.5em;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+  }
+  
+  .scroll-btn:hover {
+    background-color: #777;
+  }
+  
+  .scroll-btn.left {
+    left: 0;
+  }
+  
+  .scroll-btn.right {
+    right: 0;
+  }
+  
+
+/* Offers Section */
+.offers-title {
+    text-align: center;
+    font-size: 2.5em;
+    color: #b40c0cd2;
+    margin: 2em 0;
+    background: linear-gradient(45deg, #6e2008c9, #a30505bd);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Gallery Section */
+#gallery {
+    padding: 2em;
+    background-color: #fff;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+}
+
+.gallery-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 200px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+}
+
+.gallery-item h3 {
+    margin: 0.5em 0;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+/* Shoes Section */
+#shoes {
+    padding: 3em 1em;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.shoes-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    
+}
+.shoes-scroll-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+
+.scroll-btn:hover{
+    background-color: #777;
+}
+
+.shoes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5em;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    width: 100%;
+}
+
+.shoe-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 10000px;;
+    padding: 15px;
+}
+
+.shoe-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.shoe-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+.shoe-info {
+    padding: 1em;
+}
+
+.shoe-info h3 {
+    margin: 0.5em 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.shoe-info .price {
+    font-size: 1.2em;
+    color: #555;
+    margin: 0.5em 0;
+}
+
+.btn {
+    background-color: #28a745;
+    border: none;
+    color: white;
+    padding: 0.75em 1.5em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+.footer-title{
+    color: #a30505bd ;
+    font-size: 36px;
+    padding: 45px;
+}
+
+
+/* Footer Styling */
+#contact {
+    background: linear-gradient(135deg, #f3f4f6, #e0e4e8);
+    padding: 2em 0;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1em;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-container h2 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    color: #333;
+}
+
+.contact-container p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 1.5em;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.contact-form label {
+    font-weight: bold;
+    color: #333;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    padding: 0.75em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 100%;
+}
+
+.contact-form button {
+    background-color: #28a745;
+    border: none;
+    color: white;
+    padding: 0.75em;
+    font-size: 1.1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #218838;
+}
+
+.contact-info {
+    margin-top: 2em;
+    font-size: 1.1em;
+    color: #555;
+}
+
+.contact-info a {
+    color: #28a745;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
